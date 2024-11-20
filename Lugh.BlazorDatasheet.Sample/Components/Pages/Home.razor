@@ -1,7 +1,29 @@
 ﻿@page "/"
+@rendermode InteractiveServer
+@using BlazorDatasheet;
+@using global::BlazorDatasheet.Core.Data
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Simple example</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Simple example</h1>
 
-Welcome to your new app.
+<p>Below is a sheet with 100,000 rows. There is no data validation or formatting and the default editors are used.</p>
+
+<div style="overflow: scroll; width: 700px; height: 400px;">
+
+    <Datasheet ShowColHeadings="true"
+               ShowRowHeadings="true"
+               Sheet="sheet" />
+
+</div>
+
+@code {
+
+    private Sheet sheet;
+
+    protected override void OnInitialized()
+    {
+        sheet = new Sheet(numRows: 100000, numCols: 20000);
+    }
+
+}

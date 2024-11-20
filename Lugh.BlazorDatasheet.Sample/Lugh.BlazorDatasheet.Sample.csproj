@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Lugh.BlazorDatasheet.Sample.Client\Lugh.BlazorDatasheet.Sample.Client.csproj" />
+    <PackageReference Include="BlazorDatasheet" Version="0.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.0" />
   </ItemGroup>
 

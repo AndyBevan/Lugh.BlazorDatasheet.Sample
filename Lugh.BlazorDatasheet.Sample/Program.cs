@@ -1,5 +1,6 @@
 using Lugh.BlazorDatasheet.Sample.Client.Pages;
 using Lugh.BlazorDatasheet.Sample.Components;
+using BlazorDatasheet.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddBlazorDatasheet();
 
 var app = builder.Build();
 
